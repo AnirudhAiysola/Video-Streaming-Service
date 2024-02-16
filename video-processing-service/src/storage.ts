@@ -4,11 +4,11 @@ import ffmpeg from "fluent-ffmpeg";
 
 const storage = new Storage();
 
-const rawVideoBucketName = "sai-anirudh-yt-raw-videos";
-const processedVideoBucketName = "sai-anirudh-yt-processed-videos";
+const rawVideoBucketName = `${process.env.RAW_BUCKET_NAME}`;
+const processedVideoBucketName = `${process.env.PROCESSED_BUCKET_NAME}`;
 
-const localRawVideoPath = "./raw-videos";
-const localProcessedVideoPath = "./processed-videos";
+const localRawVideoPath = `${process.env.LOCAL_RAW_PATH}`;
+const localProcessedVideoPath = `${process.env.LOCAL_PROCESSED_PATH}`;
 
 /**
  * Creates the local directories for raw and processed videos.
